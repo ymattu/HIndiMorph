@@ -8,7 +8,7 @@
 ##' @importFrom dplyr as_data_frame select mutate rename filter row_number slice n %>%
 ##' @importFrom readr write_csv read_lines
 ##' @importFrom tidyr separate separate_rows
-##' @importFrom stringr str_detect
+##' @importFrom stringr str_detect str_replace
 ##' @export
 hindi_morph <- function(data, text_col) {
 
@@ -24,9 +24,9 @@ hindi_morph <- function(data, text_col) {
   write_csv(csvoutput, origin_file)
 
   # Make Command for Commandline
-  srcfile <- "RDRPOSTagger.py"
-  libpath <- find.package("HindiMorph")
-  cdpath <- paste0(libpath, "py/RDRPOSTagger/pSCRDRtagger")
+  srcfile <- system.file("py/RDRPOSTagger/pSCRDRtagger/RDRPOSTagger.py", package = "HindiMorph")
+  cdpath <- str_replace(srcfile, "/RDRPOSTagger.py", "")
+  # cdpath2 <- "/Users/ymattu/Desktop/HindiMorph/inst/py/RDRPOSTagger/pSCRDRtagger"
   pyenv_command <- "pyenv local 2.7.13 && pyenv rehash"
   rdr <- system.file("py/RDRPOSTagger/Models/POS/Hindi.RDR", package = "HindiMorph")
   dict <- system.file("py/RDRPOSTagger/Models/POS/Hindi.DICT", package = "HindiMorph")

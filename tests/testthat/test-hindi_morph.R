@@ -3,8 +3,6 @@ library(HindiMorph)
 context("Check hindi_morph()")
 
 test_that("Moprph", {
-  #libpath <- .libPaths()
-  #wdpath <- paste0(libpath, "/HindiMorph/tests/testthat")
   setwd(".")
   dat <- HindiMorph:::tw_text2
   res <- hindi_morph(dat, text)
