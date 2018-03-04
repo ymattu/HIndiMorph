@@ -26,10 +26,10 @@ hindi_morph <- function(data, text_col) {
   # Make Command for Commandline
   srcfile <- "RDRPOSTagger.py"
   libpath <- find.package("HindiMorph")
-  cdpath <- paste0(libpath, "/inst/RDRPOSTagger/pSCRDRtagger")
+  cdpath <- paste0(libpath, "/RDRPOSTagger/pSCRDRtagger")
   pyenv_command <- "pyenv local 2.7.13 && pyenv rehash"
-  rdr <- system.file("inst/RDRPOSTagger/Models/POS/Hindi.RDR", package = "HindiMorph")
-  dict <- system.file("inst/RDRPOSTagger/Models/POS/Hindi.DICT", package = "HindiMorph")
+  rdr <- system.file("RDRPOSTagger/Models/POS/Hindi.RDR", package = "HindiMorph")
+  dict <- system.file("RDRPOSTagger/Models/POS/Hindi.DICT", package = "HindiMorph")
 
   cmd <- paste("cd",
                cdpath,
