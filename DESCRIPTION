@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Yuya Matsumura
 Maintainer: Yuya Matsumura <mattu.yuya@gmail.com>
 Description: Morphological Analysis of Hindi using the Python scripts from RDRPOSTagger (http://rdrpostagger.sourceforge.net/)
-Depends: R (>= 2.10)
+Depends: R (>= 2.10), pyenv
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
