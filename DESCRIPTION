@@ -1,7 +1,7 @@
 Package: HindiMorph
 Type: Package
 Title: Morphological Analysis of Hindi
-Version: 0.1.0
+Version: 0.1.0.9000
 Author: Yuya Matsumura
 Maintainer: Yuya Matsumura <mattu.yuya@gmail.com>
 Description: Morphological Analysis of Hindi using the Python scripts from RDRPOSTagger (http://rdrpostagger.sourceforge.net/)
