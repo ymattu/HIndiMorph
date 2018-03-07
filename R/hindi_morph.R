@@ -58,7 +58,7 @@ hindi_morph <- function(data, text_col) {
     separate_rows(res, sep = " ") %>%
     filter(str_detect(res, "https|http|t.co") == FALSE) %>% # Delete urls
     filter(str_detect(res, "/[^A-Z]") == FALSE) %>% # Delete inappropriate rows
-    separate(col = res, into = c("word","morph"), sep = "/")
+    separate(col = res, into = c("word","pos"), sep = "/")
 
   # Remove temporary files
   file.remove(origin_file)
